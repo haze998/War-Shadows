@@ -9,13 +9,12 @@ import Foundation
 
 class HomeViewModel: ObservableObject {
     
-    @Published private(set) var lossesArr: [LossesModel] = []
+    @Published private(set) var lossesInfo: [LossesModel] = []
     
     // MARK: - Fetch personnel losses info
     func fetchPersonnelLosses() {
-        NetworkManager.shared.getPersonnelLossesInfo { [weak self] result in
-            guard let self = self else { return }
-            self.lossesArr = result
+        NetworkManager.shared.getPersonnelLossesInfo { result in
+            self.lossesInfo = result
         }
     }
 }

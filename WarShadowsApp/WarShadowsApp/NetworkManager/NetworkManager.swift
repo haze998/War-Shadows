@@ -39,7 +39,7 @@ class NetworkManager {
     
     // MARK: - Get personnel losses info
     func getPersonnelLossesInfo(completion: @escaping([LossesModel]) -> Void) {
-        guard let url = URL(string: ApiURL.lossesEquipmentURL.rawValue) else {
+        guard let url = URL(string: ApiURL.personalLossesURL.rawValue) else {
             fatalError("Invalid URL")
         }
         

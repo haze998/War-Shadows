@@ -11,14 +11,14 @@ struct HomeView: View {
     
     // MARK: - PROPERTIES
     @StateObject private var viewModel = HomeViewModel()
-    @State private var searchText = ""
+    @State private var searchedText = ""
     
     var filteredLossesInfo: [LossesModel] {
-        if searchText.isEmpty {
+        if searchedText.isEmpty {
             return viewModel.lossesInfo.reversed()
         } else {
             return viewModel.lossesInfo.filter { item in
-                return item.day.flatMap { String($0).contains(searchText) } ?? false
+                return item.day.flatMap { String($0).contains(searchedText) } ?? false
             }
         }
     }
@@ -41,7 +41,7 @@ struct HomeView: View {
             .listRowSeparator(.hidden)
             .listStyle(.plain)
             .background(colorDarkGreen)
-            .searchable(text: $searchText)
+            .searchable(text: $searchedText)
             .preferredColorScheme(.dark)
             .onAppear {
                 viewModel.fetchPersonnelLosses()

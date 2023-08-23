@@ -10,6 +10,7 @@
 		0606488B2A940876001EFD7D /* HomeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0606488A2A940876001EFD7D /* HomeCellView.swift */; };
 		060782EA2A94ACA200FFF425 /* RussoOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 060782E92A94ACA200FFF425 /* RussoOne-Regular.ttf */; };
 		060782ED2A94BDF200FFF425 /* MainHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060782EC2A94BDF200FFF425 /* MainHomeCell.swift */; };
+		06179D072A9513D9007530E4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06179D062A9513D9007530E4 /* DetailView.swift */; };
 		062C82FE2A93985400EF35C7 /* WarShadowsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062C82FD2A93985400EF35C7 /* WarShadowsAppApp.swift */; };
 		062C83002A93985400EF35C7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062C82FF2A93985400EF35C7 /* HomeView.swift */; };
 		062C83022A93985500EF35C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062C83012A93985500EF35C7 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		060782E92A94ACA200FFF425 /* RussoOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RussoOne-Regular.ttf"; sourceTree = "<group>"; };
 		060782EB2A94ACC400FFF425 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		060782EC2A94BDF200FFF425 /* MainHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeCell.swift; sourceTree = "<group>"; };
+		06179D062A9513D9007530E4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		062C82FA2A93985400EF35C7 /* WarShadowsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarShadowsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		062C82FD2A93985400EF35C7 /* WarShadowsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarShadowsAppApp.swift; sourceTree = "<group>"; };
 		062C82FF2A93985400EF35C7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -81,12 +83,12 @@
 			isa = PBXGroup;
 			children = (
 				060782EB2A94ACC400FFF425 /* Info.plist */,
-				062C831A2A93A4D900EF35C7 /* Utillity */,
 				062C830B2A939BC400EF35C7 /* App */,
 				062C83102A939F9000EF35C7 /* Model */,
 				062C83112A939F9800EF35C7 /* View */,
 				062C83122A939F9F00EF35C7 /* ViewModel */,
 				062C83172A93A3F300EF35C7 /* NetworkManager */,
+				062C831A2A93A4D900EF35C7 /* Utillity */,
 				062C83012A93985500EF35C7 /* Assets.xcassets */,
 				062C83032A93985500EF35C7 /* Preview Content */,
 			);
@@ -108,6 +110,7 @@
 				062C830E2A939D5500EF35C7 /* MainView.swift */,
 				062C82FF2A93985400EF35C7 /* HomeView.swift */,
 				062C830C2A939D2900EF35C7 /* WarMapView.swift */,
+				06179D062A9513D9007530E4 /* DetailView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				062C83162A93A1AB00EF35C7 /* LossesModel.swift in Sources */,
+				06179D072A9513D9007530E4 /* DetailView.swift in Sources */,
 				062C831E2A93A51F00EF35C7 /* HomeViewModel.swift in Sources */,
 				062C83002A93985400EF35C7 /* HomeView.swift in Sources */,
 				062C83142A93A08500EF35C7 /* EquipmentModel.swift in Sources */,

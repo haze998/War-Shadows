@@ -12,6 +12,7 @@
 		060782ED2A94BDF200FFF425 /* MainHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060782EC2A94BDF200FFF425 /* MainHomeCell.swift */; };
 		0616FBF82A95FE3900656D37 /* LossesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0616FBF72A95FE3900656D37 /* LossesDataModel.swift */; };
 		0616FBFC2A960D6300656D37 /* DetailTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0616FBFB2A960D6300656D37 /* DetailTitleView.swift */; };
+		0616FC072A9660C800656D37 /* WarMapWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0616FC062A9660C800656D37 /* WarMapWebView.swift */; };
 		06179D072A9513D9007530E4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06179D062A9513D9007530E4 /* DetailView.swift */; };
 		062C82FE2A93985400EF35C7 /* WarShadowsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062C82FD2A93985400EF35C7 /* WarShadowsAppApp.swift */; };
 		062C83002A93985400EF35C7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062C82FF2A93985400EF35C7 /* HomeView.swift */; };
@@ -33,6 +34,7 @@
 		060782EC2A94BDF200FFF425 /* MainHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeCell.swift; sourceTree = "<group>"; };
 		0616FBF72A95FE3900656D37 /* LossesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesDataModel.swift; sourceTree = "<group>"; };
 		0616FBFB2A960D6300656D37 /* DetailTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTitleView.swift; sourceTree = "<group>"; };
+		0616FC062A9660C800656D37 /* WarMapWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarMapWebView.swift; sourceTree = "<group>"; };
 		06179D062A9513D9007530E4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		062C82FA2A93985400EF35C7 /* WarShadowsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarShadowsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		062C82FD2A93985400EF35C7 /* WarShadowsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarShadowsAppApp.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 				0616FBFB2A960D6300656D37 /* DetailTitleView.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		0616FC012A96606B00656D37 /* WarMapView */ = {
+			isa = PBXGroup;
+			children = (
+				0616FC062A9660C800656D37 /* WarMapWebView.swift */,
+			);
+			path = WarMapView;
 			sourceTree = "<group>";
 		};
 		062C82F12A93985400EF35C7 = {
@@ -151,6 +161,7 @@
 			children = (
 				0616FBF92A960D4200656D37 /* Home */,
 				0616FBFA2A960D4B00656D37 /* Detail */,
+				0616FC012A96606B00656D37 /* WarMapView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,6 +275,7 @@
 				0606488B2A940876001EFD7D /* HomeCellView.swift in Sources */,
 				062C830D2A939D2900EF35C7 /* WarMapView.swift in Sources */,
 				062C82FE2A93985400EF35C7 /* WarShadowsAppApp.swift in Sources */,
+				0616FC072A9660C800656D37 /* WarMapWebView.swift in Sources */,
 				062C831C2A93A4F100EF35C7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

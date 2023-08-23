@@ -9,7 +9,11 @@ import SwiftUI
 
 struct WarMapView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            WarMapWebView(urlString: "https://deepstatemap.live/")
+                .navigationBarTitle("Deep State Map", displayMode: .inline)
+        }
+        .preferredColorScheme(.dark)
     }
 }
 

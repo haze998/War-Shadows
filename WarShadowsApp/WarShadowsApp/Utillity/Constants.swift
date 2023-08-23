@@ -26,10 +26,35 @@ enum TxtConst: String {
     case dateOfWar = "Втрати ворога на :"
     case personnelChar = "Особового складу :"
     case navBarTitle = "Russian losses in Ukraine"
+    case searchPrompt = "Знайти день війни ?"
+    case detailTitle = "ЗАГАЛЬНІ БОЙОВІ ВТРАТИ ПРОТИВНИКА НА "
 }
+
+// MARK: - CONST IMAGES
+let aircraft = Image("aircraft")
+let antiAircraftWarfare = Image("anti_aircraft_warfare")
+let apc = Image("apc")
+let cruiseMissiles = Image("cruise_missiles")
+let drone = Image("drone")
+let fieldArtillery = Image("field_artillery")
+let fuelTank = Image("fuel_tank")
+let helicopter = Image("helicopter")
+let militaryAuto = Image("military_auto")
+let mrl = Image("mrl")
+let navalShip = Image("naval_ship")
+let tank = Image("tank")
+let poisonFill = Image("poison_fill")
+let poison = Image("poison")
 
 // MARK: - CUSTOM COLOR
 let colorDarkGreen: Color = Color("ColorDarkGreen")
 let colorLightGreen: Color = Color("ColorLightGreen")
 let colorOrange: Color = Color("ColorOrange")
 let colorWhite: Color = Color("ColorWhite")
+
+// MARK: - LAYOUT
+let equipmentColumnSpacing: CGFloat = 25
+let equipmentRowSpacing: CGFloat = -20
+var equipmentGridLayout: [GridItem] {
+    return Array(repeating: GridItem(.flexible(), spacing: equipmentColumnSpacing), count: 2)
+}

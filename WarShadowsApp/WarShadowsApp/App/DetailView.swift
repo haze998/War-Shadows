@@ -8,13 +8,37 @@
 import SwiftUI
 
 struct DetailView: View {
+    
+    // MARK: - PROPERTIES
+//    let lossesData: EquipmentModel?
+    let equipmentData: [LossesDataModel]?
+    
+    // MARK: - BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            ScrollView {
+                VStack {
+                    HStack {
+//                        DetailTitleView(date: lossesData?.date)
+                    } //: HSTACK
+                    
+                } //: VSTACK
+            } //: SCROLL
+        }
+        .background(colorDarkGreen)
     }
 }
 
+// MARK: - PREVIEW
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        let dummyEquipmentData: [LossesDataModel] = [
+            LossesDataModel(title: "Aircraft destroyed: ", amount: 10, image: Image(systemName: "airplane")),
+            LossesDataModel(title: "Tank destroyed: ", amount: 5, image: Image(systemName: "flame")),
+        ]
+        
+        return DetailView(equipmentData: dummyEquipmentData)
     }
 }
+
+

@@ -10,20 +10,20 @@ import SwiftUI
 struct MainView: View {
     
     init() {
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.init(name: FontNames.russoRegular.rawValue, size: 15)!, NSAttributedString.Key.foregroundColor: UIColor(cgColor: .init(red: 1, green: 0.44, blue: 0.24, alpha: 1))], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.init(name: FontNames.russoRegular.rawValue, size: 15)!], for: .normal)
     }
     
     var body: some View {
         TabView {
             HomeView()
                 .tabItem {
-                        Image("poison")
-                        Text("Home")
+                        Image(systemName: "chart.xyaxis.line")
+                        Text("Losses")
                 }
             
             WarMapView()
                 .tabItem {
-                    Image("map")
+                    Image(systemName: "map")
                     Text("War Map")
                 }
         } //: TAB

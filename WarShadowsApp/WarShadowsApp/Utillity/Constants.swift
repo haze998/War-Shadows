@@ -31,6 +31,23 @@ enum TxtConst: String {
     case detailTitle = "ЗАГАЛЬНІ БОЙОВІ ВТРАТИ ПРОТИВНИКА НА "
 }
 
+// MARK: - EQUIPMENT LOSSES CONST
+struct equipmentLosses {
+    static let personnel = "Особового складу :"
+    static let aircraft = "Літаків :"
+    static let helicopter = "Гелікоптерів :"
+    static let tank = "Танків :"
+    static let apc = "ББМ :"
+    static let fieldArtillery = "Артсистем :"
+    static let mrl = "РСЗВ :"
+    static let militaryAuto = "Автомобілів :"
+    static let fuelTank = "Цистерни з ПММ :"
+    static let drone = "БПЛА/Дронів :"
+    static let navalShip = "Кораблів/Катерів :"
+    static let antiAircraftWarfare = "Засобів ППО :"
+    static let cruiseMissiles = "Крилатих ракет :"
+}
+
 // MARK: - CONST IMAGES
 let aircraft = Image("aircraft")
 let antiAircraftWarfare = Image("anti_aircraft_warfare")
@@ -44,8 +61,6 @@ let militaryAuto = Image("military_auto")
 let mrl = Image("mrl")
 let navalShip = Image("naval_ship")
 let tank = Image("tank")
-let poisonFill = Image("poison_fill")
-let poison = Image("poison")
 
 // MARK: - CUSTOM COLOR
 let colorDarkGreen: Color = Color("ColorDarkGreen")

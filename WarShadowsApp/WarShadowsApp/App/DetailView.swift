@@ -11,7 +11,7 @@ struct DetailView: View {
     
     // MARK: - PROPERTIES
 //    let lossesData: EquipmentModel?
-    let equipmentData: [LossesDataModel]?
+//    let equipmentData: [LossesDataModel]?
     
     // MARK: - BODY
     var body: some View {
@@ -32,12 +32,7 @@ struct DetailView: View {
 // MARK: - PREVIEW
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let dummyEquipmentData: [LossesDataModel] = [
-            LossesDataModel(title: "Aircraft destroyed: ", amount: 10, image: Image(systemName: "airplane")),
-            LossesDataModel(title: "Tank destroyed: ", amount: 5, image: Image(systemName: "flame")),
-        ]
-        
-        return DetailView(equipmentData: dummyEquipmentData)
+        DetailView()
     }
 }
 

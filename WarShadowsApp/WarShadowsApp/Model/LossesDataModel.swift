@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct LossesDataModel {
+struct LossesDataModel: Identifiable {
+    var id = UUID()
+    let date: String?
+    let day: Int?
     let title: String?
     let amount: Int?
     let image: Image

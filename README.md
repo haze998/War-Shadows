@@ -16,7 +16,7 @@ The ***WarShadows App*** describes the loss of equipment and personnel of the lo
 
 
   ## Overview
-<img width="750" alt="WarShadows-mock" src="https://github.com/haze998/War-Shadows/assets/102597481/7a31c7d5-fe44-4fde-8382-50cd4e436b26">
+<img width="750" alt="WarShadows-mock" src="https://github.com/haze998/War-Shadows/assets/102597481/178ed306-96d2-441b-b978-aae859685ece">
 
 ## Features
 - Custom Fonts

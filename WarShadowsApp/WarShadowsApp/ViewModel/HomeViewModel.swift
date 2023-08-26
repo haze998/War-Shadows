@@ -10,15 +10,13 @@ import SwiftUI
 
 class HomeViewModel: ObservableObject {
     
-//    @Published private(set) var lossesDataArray: [LossesDataModel] = []
-
-    @Published private(set) var lossesInfo: [LossesModel] = []
-    @Published private(set) var equipmentInfo: [EquipmentModel] = []
+    @Published private(set) var lossesDataArray: [LossesDataModel] = []
+    var lossesInfo: [LossesModel] = []
+    var equipmentInfo: [EquipmentModel] = []
     
     func fetchInfo() {
         fetchPersonnelLosses()
         fetchEquipmentLosses()
-//        combineData()
     }
     
     // MARK: - Fetch personnel losses info
@@ -32,177 +30,63 @@ class HomeViewModel: ObservableObject {
     private func fetchEquipmentLosses() {
         NetworkManager.shared.getEquipmentLossesInfo { result in
             self.equipmentInfo = result
+            self.makeArray()
         }
     }
     
-//    func convertToArray(_ losses: LossesModel?, _ equip: EquipmentModel?) -> [LossesDataModel] {
-//
-//        if let date = losses?.date {
-//            lossesDataArray.append(LossesDataModel(date: date,
-//                                                   day: losses?.day,
-//                                                   title: "", amount: 0,
-//                                                   image: Image("")))
-//        }
-//
-//        if let day = losses?.day {
-//            lossesDataArray.append(LossesDataModel(date: losses?.date,
-//                                                   day: day,
-//                                                   title: "",
-//                                                   amount: 0,
-//                                                   image: Image("")))
-//        }
-//
-//        if let aircrafts = equip?.aircraft {
-//            lossesDataArray.append((LossesDataModel(date: equip?.date,
-//                                                    day: equip?.day,
-//                                                    title: equipmentLosses.aircraft,
-//                                                    amount: aircrafts,
-//                                                    image: aircraft)))
-//        }
-//
-////        if let helicopters = equip?.helicopter {
-////            lossesDataArray.append((LossesData(title: "Helicopter destroyed: ",
-////                                               amount: helicopters,
-////                                               image: .helicopter)))
-////        }
-////
-////        if let tanks = equip?.tank {
-////            lossesDataArray.append((LossesData(title: "Tank destroyed: ",
-////                                               amount: tanks,
-////                                               image: .tank)))
-////        }
-////
-////        if let apcs = equip?.APC {
-////            lossesDataArray.append((LossesData(title: "APC destroyed: ",
-////                                               amount: apcs,
-////                                               image: .APC)))
-////        }
-////
-////        if let artilleries = equip?.artillery {
-////            lossesDataArray.append((LossesData(title: "Artillery destroyed: ",
-////                                               amount: artilleries,
-////                                               image: .artillery)))
-////        }
-////
-////        if let mrls = equip?.MRL {
-////            lossesDataArray.append((LossesData(title: "MRL destroyed: ",
-////                                               amount: mrls,
-////                                               image: .MRL)))
-////        }
-////
-////        if let militaryAutos = equip?.militaryAuto {
-////            lossesDataArray.append((LossesData(title: "MilitaryAuto destroyed: ",
-////                                               amount: militaryAutos,
-////                                               image: .militaryAuto)))
-////        }
-////
-////        if let fuelTanks = equip?.fuelTank {
-////            lossesDataArray.append((LossesData(title: "FuelTank destroyed: ",
-////                                               amount: fuelTanks,
-////                                               image: .fuelTank)))
-////        }
-////
-////        if let drones = equip?.drone {
-////            lossesDataArray.append((LossesData(title: "Drone destroyed: ",
-////                                               amount: drones,
-////                                               image: .drone)))
-////        }
-////
-////        if let navalShips = equip?.navalShip {
-////            lossesDataArray.append((LossesData(title: "NavalShip destroyed: ",
-////                                               amount: navalShips,
-////                                               image: .ship)))
-////        }
-////
-////        if let antiAircrafts = equip?.antiAircraft {
-////            lossesDataArray.append((LossesData(title: "AntiAircraft destroyed: ",
-////                                               amount: antiAircrafts,
-////                                               image: .airDefense)))
-////        }
-////
-////        if let specialEquips = equip?.specialEquip {
-////            lossesDataArray.append((LossesData(title: "Special Equip destroyed: ",
-////                                               amount: specialEquips,
-////                                               image: .specialEquip)))
-////        }
-////
-////        if let missiles = equip?.cruiseMissiles {
-////            lossesDataArray.append((LossesData(title: "CruiseMissiles destroyed: ",
-////                                               amount: missiles,
-////                                               image: .missle)))
-////        }
-////
-////        if let vehiclesAndFuelTanks = equip?.vehiclesAndFuelTanks {
-////            lossesDataArray.append((LossesData(title: "Vehicles and fueltanks: ",
-////                                               amount: vehiclesAndFuelTanks,
-////                                               image: .fuelTank)))
-////        }
-//
-//        return lossesDataArray
-//    }
-//
-//    func convertCombineData(_ losses: LossesModel?, _ equip: EquipmentModel?) -> [LossesDataModel] {
-//        var lossesDataArray: [LossesDataModel] = []
-//
-//        if let losses = losses,
-//           let equip = equip {
-//            let combineData: [(title: String, keyPath: KeyPath<EquipmentModel, Int?>, image: Image?)] = [
-//            ]
-//        }
-//    }
-    
-//    func convertToArray(_ equip: EquipmentModel?) -> [LossesDataModel] {
-////        var lossesDataArray: [LossesDataModel] = []
-//
-//        if let equip = equip {
-//            let equipmentData: [(title: String, keyPath: KeyPath<EquipmentModel, Int?>, image: Image?)] = [
-//                ("Aircraft destroyed: ", \.aircraft, aircraft),
-//                ("Helicopter destroyed: ", \.helicopter, helicopter),
-//                ("Tank destroyed: ", \.tank, tank),
-//                ("APC destroyed: ", \.apc, apc),
-//                ("Artillery destroyed: ", \.fieldArtillery, fieldArtillery),
-//                ("MRL destroyed: ", \.mrl, mrl),
-//                ("MilitaryAuto destroyed: ", \.militaryAuto, militaryAuto),
-//                ("FuelTank destroyed: ", \.fuelTank, fuelTank),
-//                ("Drone destroyed: ", \.drone, drone),
-//                ("NavalShip destroyed: ", \.navalShip, navalShip),
-//                ("AntiAircraft destroyed: ", \.antiAircraftWarfare, antiAircraftWarfare),
-//                ("CruiseMissiles destroyed: ", \.cruiseMissiles, cruiseMissiles)
-//            ]
-//
-//            for data in equipmentData {
-//                let amount = equip[keyPath: data.keyPath]
-//                if amount ?? 0 > 0 {
-//                    lossesDataArray.append(LossesDataModel(title: data.title, amount: amount, image: data.image!))
-//                }
-//            }
-//        }
-//
-//        return lossesDataArray
-//    }
-    
-//    func combineData() {
-//        for personnel in self.lossesInfo {
-//            for equipment in self.equipmentInfo {
-//                if personnel.date == equipment.date {
-//                    lossesDataArray.append(LossesDataModel(
-//                        date: personnel.date,
-//                        day: personnel.day,
-//                        title: "",
-//                        amount: 0,
-//                        image: Image("")))
-////                    self.lossesDataArray.append(LossesData(
-////                        date: personnel.date,
-////                        day: personnel.day,
-////                        personnelAmount: personnel.personnelAmount,
-////                        aircraft: equipment.aircraft,
-////                        helicopter: equipment.helicopter,
-////                        greatestLossesDirection: equipment.greatestLossesDirection,
-////                        lossesStats: self.getLossesStats(personnel: personnel, equipment: equipment)
-////                    ))
-//                }
-//            }
-//        }
-//    }
+    func makeArray() {
+        var lossesData: [LossesDataModel] = []
 
+        for loss in lossesInfo {
+            if let combinedData = createCombinedData(for: loss) {
+                lossesData.append(LossesDataModel(date: loss.date, day: loss.day, personnel: loss.personnel, statsPersonnel: loss.statsPersonnel, pow: loss.pow, equip: combinedData))
+            }
+        }
+
+        lossesDataArray = lossesData
+    }
+
+    func createCombinedData(for loss: LossesModel) -> CombinedEquipmentModel? {
+        guard let equipInfo = equipmentInfo.first(where: { $0.day == loss.day }) else {
+            return nil
+        }
+
+        let aircraftStats = EquipmentStats(image: Image(CellImages.aircraft.rawValue), value: equipInfo.aircraft, title: equipmentLosses.aircraft)
+        let helicopterStats = EquipmentStats(image: Image(CellImages.helicopter.rawValue), value: equipInfo.helicopter, title: equipmentLosses.helicopter)
+        let tankStats = EquipmentStats(image: Image(CellImages.tank.rawValue), value: equipInfo.tank, title: equipmentLosses.tank)
+        let apcStats = EquipmentStats(image: Image(CellImages.apc.rawValue), value: equipInfo.apc, title: equipmentLosses.apc)
+        let fieldArtilleryStats = EquipmentStats(image: Image(CellImages.fieldArtillery.rawValue), value: equipInfo.fieldArtillery, title: equipmentLosses.fieldArtillery)
+        let mrlStats = EquipmentStats(image: Image(CellImages.mrl.rawValue), value: equipInfo.mrl, title: equipmentLosses.mrl)
+        let militaryAutoStats = EquipmentStats(image: Image(CellImages.militaryAuto.rawValue), value: equipInfo.militaryAuto, title: equipmentLosses.militaryAuto)
+        let fuelTankStats = EquipmentStats(image: Image(CellImages.fuelTank.rawValue), value: equipInfo.fuelTank, title: equipmentLosses.fuelTank)
+        let droneStats = EquipmentStats(image: Image(CellImages.drone.rawValue), value: equipInfo.drone, title: equipmentLosses.drone)
+        let navalShipStats = EquipmentStats(image: Image(CellImages.navalShip.rawValue), value: equipInfo.navalShip, title: equipmentLosses.navalShip)
+        let antiAircraftWarfareStats = EquipmentStats(image: Image(CellImages.antiAircraftWarfare.rawValue), value: equipInfo.antiAircraftWarfare, title: equipmentLosses.antiAircraftWarfare)
+        let specialEquipmentStats = EquipmentStats(image: Image(""), value: equipInfo.specialEquipment, title: "")
+        let mobileSRBMSystemStats = EquipmentStats(image: Image(""), value: equipInfo.mobileSRBMSystem, title: "")
+        let cruiseMissilesStats = EquipmentStats(image: Image(CellImages.cruiseMissiles.rawValue), value: equipInfo.cruiseMissiles, title: equipmentLosses.cruiseMissiles)
+
+        let combinedData = CombinedEquipmentModel(
+            date: equipInfo.date,
+            day: equipInfo.day,
+            aircraft: aircraftStats,
+            helicopter: helicopterStats,
+            tank: tankStats,
+            apc: apcStats,
+            fieldArtillery: fieldArtilleryStats,
+            mrl: mrlStats,
+            militaryAuto: militaryAutoStats,
+            fuelTank: fuelTankStats,
+            drone: droneStats,
+            navalShip: navalShipStats,
+            antiAircraftWarfare: antiAircraftWarfareStats,
+            specialEquipment: specialEquipmentStats,
+            mobileSRBMSystem: mobileSRBMSystemStats,
+            greatestLossesDirection: equipInfo.greatestLossesDirection,
+            vehiclesAndFuelTanks: mobileSRBMSystemStats,
+            cruiseMissiles: cruiseMissilesStats
+        )
+
+        return combinedData
+    }
 }

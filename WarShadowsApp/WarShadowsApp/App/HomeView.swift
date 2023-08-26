@@ -13,11 +13,11 @@ struct HomeView: View {
     @StateObject private var homeViewModel = HomeViewModel()
     @State private var searchedText = ""
     
-    var filteredLossesInfo: [LossesModel] {
+    var filteredLossesInfo: [LossesDataModel] {
         if searchedText.isEmpty {
-            return homeViewModel.lossesInfo.reversed()
+            return homeViewModel.lossesDataArray.reversed()
         } else {
-            return homeViewModel.lossesInfo.filter { item in
+            return homeViewModel.lossesDataArray.filter { item in
                 return item.day.flatMap { String($0).contains(searchedText) } ?? false
             }
         }
@@ -35,8 +35,7 @@ struct HomeView: View {
                         } else {
                             HomeCellView(currentDay: item.day, currentLosses: item.personnel)
                         }
-                        
-//                        NavigationLink(destination: DetailView(lossesData: item)) {}
+                        NavigationLink(destination: DetailView(lossesData: item)) {}
                     } //: ZSTACK
                 }
                 .listRowBackground(Color.clear)
@@ -54,7 +53,6 @@ struct HomeView: View {
         } //: NAVIGATION
     }
 }
-
 
 // MARK: - PREVIEW
 struct ContentView_Previews: PreviewProvider {

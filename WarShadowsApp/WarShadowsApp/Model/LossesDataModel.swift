@@ -5,13 +5,14 @@
 //  Created by Evgeniy Docenko on 23.08.2023.
 //
 
-import SwiftUI
+import Foundation
 
 struct LossesDataModel: Identifiable {
     var id = UUID()
     let date: String?
-    let day: Int?
-    let title: String?
-    let amount: Int?
-    let image: Image
+    let day, personnel: Int?
+    let statsPersonnel: Personnel?
+    let pow: Int?
+    
+    let equip: CombinedEquipmentModel
 }

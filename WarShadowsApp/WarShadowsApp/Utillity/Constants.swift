@@ -26,9 +26,10 @@ enum TxtConst: String {
     case personnel = "Особового складу"
     case dateOfWar = "Втрати ворога на :"
     case personnelChar = "Особового складу :"
-    case navBarTitle = "Russian losses in Ukraine"
+    case navBarTitle = "War in Ukraine"
     case searchPrompt = "Знайти день війни ?"
     case detailTitle = "ЗАГАЛЬНІ БОЙОВІ ВТРАТИ ПРОТИВНИКА НА "
+    case dayTitle = "ДЕНЬ ВІЙНИ : "
 }
 
 // MARK: - EQUIPMENT LOSSES CONST
@@ -49,18 +50,26 @@ struct equipmentLosses {
 }
 
 // MARK: - CONST IMAGES
-let aircraft = Image("aircraft")
-let antiAircraftWarfare = Image("anti_aircraft_warfare")
-let apc = Image("apc")
-let cruiseMissiles = Image("cruise_missiles")
-let drone = Image("drone")
-let fieldArtillery = Image("field_artillery")
-let fuelTank = Image("fuel_tank")
-let helicopter = Image("helicopter")
-let militaryAuto = Image("military_auto")
-let mrl = Image("mrl")
-let navalShip = Image("naval_ship")
-let tank = Image("tank")
+enum CellImages: String {
+    case aircraft = "aircraft"
+    case antiAircraftWarfare = "anti_aircraft_warfare"
+    case apc = "apc"
+    case cruiseMissiles = "cruise_missiles"
+    case drone = "drone"
+    case fieldArtillery = "field_artillery"
+    case fuelTank = "fuel_tank"
+    case helicopter = "helicopter"
+    case militaryAuto = "military_auto"
+    case mrl = "mrl"
+    case navalShip = "naval_ship"
+    case tank = "tank"
+    case ak = "ak-47"
+    case coffin = "coffin"
+
+    func setImage() -> Image {
+        return Image(self.rawValue)
+    }
+}
 
 // MARK: - CUSTOM COLOR
 let colorDarkGreen: Color = Color("ColorDarkGreen")
@@ -69,8 +78,8 @@ let colorOrange: Color = Color("ColorOrange")
 let colorWhite: Color = Color("ColorWhite")
 
 // MARK: - LAYOUT
-let equipmentColumnSpacing: CGFloat = 25
-let equipmentRowSpacing: CGFloat = -20
+let equipmentColumnSpacing: CGFloat = 15
+let equipmentRowSpacing: CGFloat = 5
 var equipmentGridLayout: [GridItem] {
-    return Array(repeating: GridItem(.flexible(), spacing: equipmentColumnSpacing), count: 2)
+    return Array(repeating: GridItem(.flexible(), spacing: equipmentColumnSpacing), count: 1)
 }

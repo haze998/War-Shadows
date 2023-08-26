@@ -25,6 +25,10 @@
 		062C83192A93A41A00EF35C7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062C83182A93A41A00EF35C7 /* NetworkManager.swift */; };
 		062C831C2A93A4F100EF35C7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062C831B2A93A4F100EF35C7 /* Constants.swift */; };
 		062C831E2A93A51F00EF35C7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062C831D2A93A51F00EF35C7 /* HomeViewModel.swift */; };
+		06A200DC2A99F919005AF661 /* CombinedEquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A200DB2A99F919005AF661 /* CombinedEquipmentModel.swift */; };
+		06A200DE2A99F93A005AF661 /* EquipmentStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A200DD2A99F93A005AF661 /* EquipmentStats.swift */; };
+		06A200E02A9A0951005AF661 /* EquipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A200DF2A9A0951005AF661 /* EquipmentView.swift */; };
+		06F2C3372A98BAC900A9B25B /* DetailDayTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C3362A98BAC900A9B25B /* DetailDayTitle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		062C83182A93A41A00EF35C7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		062C831B2A93A4F100EF35C7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		062C831D2A93A51F00EF35C7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		06A200DB2A99F919005AF661 /* CombinedEquipmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedEquipmentModel.swift; sourceTree = "<group>"; };
+		06A200DD2A99F93A005AF661 /* EquipmentStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentStats.swift; sourceTree = "<group>"; };
+		06A200DF2A9A0951005AF661 /* EquipmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentView.swift; sourceTree = "<group>"; };
+		06F2C3362A98BAC900A9B25B /* DetailDayTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDayTitle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				0616FBFB2A960D6300656D37 /* DetailTitleView.swift */,
+				06F2C3362A98BAC900A9B25B /* DetailDayTitle.swift */,
+				06A200DF2A9A0951005AF661 /* EquipmentView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -152,6 +162,8 @@
 				062C83152A93A1AB00EF35C7 /* LossesModel.swift */,
 				062C83132A93A08500EF35C7 /* EquipmentModel.swift */,
 				0616FBF72A95FE3900656D37 /* LossesDataModel.swift */,
+				06A200DB2A99F919005AF661 /* CombinedEquipmentModel.swift */,
+				06A200DD2A99F93A005AF661 /* EquipmentStats.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,10 +275,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0616FBFC2A960D6300656D37 /* DetailTitleView.swift in Sources */,
+				06A200E02A9A0951005AF661 /* EquipmentView.swift in Sources */,
 				062C83162A93A1AB00EF35C7 /* LossesModel.swift in Sources */,
+				06A200DE2A99F93A005AF661 /* EquipmentStats.swift in Sources */,
 				06179D072A9513D9007530E4 /* DetailView.swift in Sources */,
 				062C831E2A93A51F00EF35C7 /* HomeViewModel.swift in Sources */,
 				062C83002A93985400EF35C7 /* HomeView.swift in Sources */,
+				06F2C3372A98BAC900A9B25B /* DetailDayTitle.swift in Sources */,
 				0616FBF82A95FE3900656D37 /* LossesDataModel.swift in Sources */,
 				062C83142A93A08500EF35C7 /* EquipmentModel.swift in Sources */,
 				060782ED2A94BDF200FFF425 /* MainHomeCell.swift in Sources */,
@@ -274,6 +289,7 @@
 				062C830F2A939D5500EF35C7 /* MainView.swift in Sources */,
 				0606488B2A940876001EFD7D /* HomeCellView.swift in Sources */,
 				062C830D2A939D2900EF35C7 /* WarMapView.swift in Sources */,
+				06A200DC2A99F919005AF661 /* CombinedEquipmentModel.swift in Sources */,
 				062C82FE2A93985400EF35C7 /* WarShadowsAppApp.swift in Sources */,
 				0616FC072A9660C800656D37 /* WarMapWebView.swift in Sources */,
 				062C831C2A93A4F100EF35C7 /* Constants.swift in Sources */,
